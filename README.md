@@ -5,8 +5,11 @@ clmex OPENCL to matlab,nvmex CUDA to matlab
 
 
 >> clmex('oclinfo.cpp')
+
 mex ('oclinfo.cpp' ,'-IC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\include','-IE:\work\code\NVMEX','-ID:\Program Files\MATLAB\R2013a\extern\include','-ID:\boost_1_54_0','-ID:\Users\sky\GitHub\compute\include', '-LC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\lib\Win32', '-lopencl')
+
 >> oclinfo
+
 CL_PLATFORM_NAME = NVIDIA CUDA
 CL_PLATFORM_VERSION = OpenCL 1.1 CUDA 4.2.1
 1 devices found
@@ -20,6 +23,7 @@ Device #0 name = GeForce G105M
 	Max Work Group Size:	512
 	Number of parallel compute cores:	2
 >> 
+
 
 >> nvmex('nv_freemem.cu')
 >> nv_freemem
